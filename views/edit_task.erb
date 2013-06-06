@@ -1,0 +1,7 @@
+<p>Editing this book:</p>
+
+<form method="post" action="/save_task/<%= @task.id %>">
+	<input type="text" name="task_task" value="<%= @task.task %>">
+	<input type="text" name="task_details" value="<%= @task.details %>">
+	<button>Save Task</button>
+</form>

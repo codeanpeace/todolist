@@ -1,0 +1,15 @@
+<h1>To-do Task List<h1>
+
+<% @tasks.each do |task| %>
+	<% if task.completed == false %>
+		<p>Task: <%= task.task %> | Details: <%= task.details %>.
+			<a href="/edit_task/<%= task.id %>">Edit</a>
+			<a href="/complete_task/<%= task.id %>">Completed</a>
+		</p>
+	<% end %>
+<% end %>
+
+<p><a href="/new_task">Add a new task!</a></p>
+<p><a href="/completed_tasks">View your completed tasks!</a></p>
+
+
